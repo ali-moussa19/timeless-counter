@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050816">
+  <meta name="description" content="Un compteur du temps écoulé depuis le 18 août 2024.">
+  <title>Le temps écoulé</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js.js" defer></script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+
+  <main class="container">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">◈</span>
+        ALI DOUTOUM<span class="logo-dot">.</span>
+      </div>
+      <div class="live-status">
+        <span class="live-dot"></span>
+        EN DIRECT
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">NOTRE TEMPS · NOTRE HISTOIRE</p>
+      <h1>Le temps passe,<br> <span>mais mon cœur est resté auprès des miens..❤️‍🩹</span></h1>
+      <p class="subtitle">
+        Chaque seconde compte. Voici le temps écoulé depuis le début.
+      </p>
+    </section>
+
+    <section class="counter-panel" aria-label="Temps écoulé">
+      <div class="panel-top">
+        <span class="panel-label">TEMPS ÉCOULÉ DEPUIS</span>
+        <span class="calendar-icon">◷</span>
+      </div>
+
+      <div class="start-date">18 AOÛT 2024</div>
+
+      <div class="counter-grid">
+        <article class="time-card">
+          <span class="time-value" id="years">0</span>
+          <span class="time-label">ANNÉES</span>
+        </article>
+        <article class="time-card">
+          <span class="time-value" id="months">0</span>
+          <span class="time-label">MOIS</span>
+        </article>
+        <article class="time-card">
+          <span class="time-value" id="days">0</span>
+          <span class="time-label">JOURS</span>
+        </article>
+        <article class="time-card">
+          <span class="time-value" id="hours">00</span>
+          <span class="time-label">HEURES</span>
+        </article>
+        <article class="time-card">
+          <span class="time-value" id="minutes">00</span>
+          <span class="time-label">MINUTES</span>
+        </article>
+        <article class="time-card seconds-card">
+          <span class="time-value" id="seconds">00</span>
+          <span class="time-label">SECONDES</span>
+        </article>
+      </div>
+
+      <div class="panel-bottom">
+        <span class="pulse-line"></span>
+        <p class="start-date">Loin des Miens</p>
+        <span class="pulse-line"></span>
+      </div>
+    </section>
+
+    <section class="now-panel">
+      <div class="now-icon">⌁</div>
+      <div class="now-content">
+        <p class="now-label">NOUS SOMMES ACTUELLEMENT LE</p>
+        <p class="current-date" id="current-date">Chargement...</p>
+        <p class="current-time" id="current-time">--:--:--</p>
+      </div>
+      <div class="timezone" id="timezone">HEURE LOCALE</div>
+    </section>
+
+    <footer>
+      <p>LE TEMPS EST PRÉCIEUX<span> · </span>PROFITE DE CHAQUE INSTANT</p>
+      <p class="footer-year">ALI Etu_en_info <span id="year-now"></span></p>
+    </footer>
+  </main>
+</body>
+</html>
