@@ -75,15 +75,57 @@
       </div>
     </section>
 
-    <section class="now-panel">
-      <div class="now-icon">⌁</div>
-      <div class="now-content">
-        <p class="now-label">NOUS SOMMES ACTUELLEMENT LE</p>
-        <p class="current-date" id="current-date">Chargement...</p>
-        <p class="current-time" id="current-time">--:--:--</p>
-      </div>
-      <div class="timezone" id="timezone">HEURE LOCALE</div>
-    </section>
+
+<section class="now-panel" style="
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 220px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+">
+  <div class="now-content" style="
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  ">
+    <p id="days-count" style="
+      margin: 0;
+      font-size: clamp(32px, 8vw, 62px);
+      font-weight: 800;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-align: center;
+      color: #55f6ff;
+      text-shadow:
+        0 0 8px rgba(85, 246, 255, 0.8),
+        0 0 22px rgba(85, 246, 255, 0.5),
+        0 0 45px rgba(85, 246, 255, 0.25);
+      overflow-wrap: anywhere;
+    ">Calcul...</p>
+  </div>
+
+  <script>
+    (function () {
+      const startDate = new Date(2024, 7, 18);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const days = Math.floor(
+        (today - startDate) / (1000 * 60 * 60 * 24)
+      ) + 1;
+
+      document.getElementById("days-count").textContent =
+        days + "Jours Withouth Mom";
+    })();
+  </script>
+</section>
+
 
     <footer>
       <p>LE TEMPS EST PRÉCIEUX<span> · </span>PROFITE DE CHAQUE INSTANT</p>
